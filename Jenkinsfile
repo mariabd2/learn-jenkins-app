@@ -10,12 +10,8 @@ pipeline {
 			}
 			steps {
 				sh '''
-				ls -la
-				node --version
-				npm --version
-				npm ci
-				npm run build
-				ls -la
+				npm install netlify-cli -g
+				netlify --version
 				'''
 			}
 		}
